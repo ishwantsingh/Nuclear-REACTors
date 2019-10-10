@@ -36,7 +36,7 @@ export default function AppHome(props) {
 
   return (
     <StyledContainer>
-      <div className="containerAll">
+      {/* <div className="containerAll">
         <div className="heading">Travelling Via ?</div>
         <div className="links">
           <Link to="/road" className="button">
@@ -46,7 +46,7 @@ export default function AppHome(props) {
             Metro
           </Link>
         </div>
-      </div>
+      </div> */}
     </StyledContainer>
   );
 }
