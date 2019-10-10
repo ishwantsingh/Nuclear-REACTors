@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 import metro from "../../images/metro.jpg";
 
@@ -258,261 +259,288 @@ const Image = styled.img`
   position: relative;
 `;
 
-export default function AppHome(props) {
-  if (!props.auth.uid) return <Redirect to="/login" />;
+class AppHome extends React.Component {
+  state = {
+    start: "",
+    end: ""
+  };
 
-  return (
-    <StyledContainer>
-      <Image src={metro} alt="metro" />
-      <form action="#">
-        <p>
-          <label className="input-box n-1">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-2">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-3">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-4">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-5">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-6">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-7">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-8">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-9">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-10">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-11">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-12">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-13">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-14">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-15">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-16">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-17">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-18">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-19">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-20">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-21">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-22">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-23">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-24">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-25">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-26">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-27">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-28">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-29">
-            <input type="checkbox" class="filled-in" />
-            <span>Rajiv Chowk</span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-30">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-31">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-32">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-33">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-34">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-35">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-36">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-37">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-38">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-        <p>
-          <label className="input-box n-39">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>{" "}
-        <p>
-          <label className="input-box n-40">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>{" "}
-        <p>
-          <label className="input-box n-41">
-            <input type="checkbox" class="filled-in" />
-            <span></span>
-          </label>
-        </p>
-      </form>
-      {/* <div className="containerAll">
+  startRef = React.createRef();
+  endRef = React.createRef();
+
+  handleChange = e => {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.getInfo(this.state.start, this.state.end);
+    this.setState({
+      start: "",
+      end: ""
+    });
+    this.startRef.current.value = "";
+    this.endRef.current.value = "";
+  };
+
+  render() {
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to="/login" />;
+
+    return (
+      <StyledContainer>
+        <Image src={metro} alt="metro" />
+        <form onSubmit={this.handleSubmit}>
+          <p>
+            <label className="input-box n-1">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-2">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-3">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-4">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-5">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-6">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-7">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-8">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-9">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-10">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-11">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-12">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-13">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-14">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-15">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-16">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-17">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-18">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-19">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-20">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-21">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-22">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-23">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-24">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-25">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-26">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-27">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-28">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-29">
+              <input type="checkbox" className="filled-in" value="" />
+              <span>Rajiv Chowk</span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-30">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-31">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-32">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-33">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-34">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-35">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-36">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-37">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-38">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+          <p>
+            <label className="input-box n-39">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>{" "}
+          <p>
+            <label className="input-box n-40">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>{" "}
+          <p>
+            <label className="input-box n-41">
+              <input type="checkbox" className="filled-in" value="" />
+              <span></span>
+            </label>
+          </p>
+        </form>
+        {/* <div className="containerAll">
         <div className="heading">Travelling Via ?</div>
         <div className="links">
           <Link to="/road" className="button">
@@ -523,6 +551,18 @@ export default function AppHome(props) {
           </Link>
         </div>
       </div> */}
-    </StyledContainer>
-  );
+      </StyledContainer>
+    );
+  }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getInfo: (start, end) => dispatch(getInfo(start, end))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AppHome);
