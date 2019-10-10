@@ -53,7 +53,7 @@ const Headbar = props => {
   return (
     <StyledDiv>
       <Link to="/" className="logo">
-        Tre-way
+        Tre-Way
       </Link>
 
       <div className="link-container">{links}</div>
