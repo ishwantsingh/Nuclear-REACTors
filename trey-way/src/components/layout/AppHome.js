@@ -145,114 +145,116 @@ const StyledContainer = styled.div`
   }
   .n-21 {
     position: absolute;
-    left: 435.6px;
-    top: 837px;
+    left: 652.6px;
+    top: 97px;
   }
   .n-22 {
     position: absolute;
-    left: 394.6px;
-    top: 798px;
+    left: 701.6px;
+    top: 83px;
   }
   .n-23 {
     position: absolute;
-    left: 358.6px;
-    top: 755px;
+    left: 736.6px;
+    top: 120px;
   }
   .n-24 {
     position: absolute;
-    left: 318.6px;
-    top: 721px;
+    left: 771.6px;
+    top: 145px;
   }
   .n-25 {
     position: absolute;
-    left: 284.6px;
-    top: 681px;
+    left: 822.6px;
+    top: 152px;
   }
   .n-26 {
     position: absolute;
-    left: 244.6px;
-    top: 644px;
+    left: 902.6px;
+    top: 152px;
   }
   .n-27 {
     position: absolute;
-    left: 209.6px;
-    top: 606px;
+    left: 982.6px;
+    top: 152px;
   }
   .n-28 {
     position: absolute;
-    left: 167.6px;
-    top: 567px;
+    left: 1048.6px;
+    top: 178px;
   }
   .n-29 {
+    color: black
+    font-weight: bold;
     position: absolute;
-    left: 126.6px;
-    top: 495px;
+    left: 1093.6px;
+    top: 220px;
   }
   .n-30 {
     position: absolute;
-    left: 159.6px;
-    top: 458px;
+    left: 1125.6px;
+    top: 249px;
   }
   .n-31 {
     position: absolute;
-    left: 189.6px;
-    top: 447px;
+    left: 1163.6px;
+    top: 281px;
   }
   .n-32 {
     position: absolute;
-    left: 242.6px;
-    top: 442px;
+    left: 1228.6px;
+    top: 281px;
   }
   .n-33 {
     position: absolute;
-    left: 294.6px;
-    top: 444px;
+    left: 1292.6px;
+    top: 281px;
   }
   .n-34 {
     position: absolute;
-    left: 345.6px;
-    top: 409px;
+    left: 1352.6px;
+    top: 281px;
   }
   .n-35 {
     position: absolute;
-    left: 385.6px;
-    top: 360px;
+    left: 1385.6px;
+    top: 245px;
   }
   .n-36 {
     position: absolute;
-    left: 433.6px;
-    top: 321px;
+    left: 1423.6px;
+    top: 207px;
   }
   .n-37 {
     position: absolute;
-    left: 475.6px;
-    top: 273px;
+    left: 1460.6px;
+    top: 163px;
   }
   .n-38 {
     position: absolute;
-    left: 521.6px;
-    top: 232px;
+    left: 1518.6px;
+    top: 127px;
   }
   .n-39 {
     position: absolute;
-    left: 560.6px;
-    top: 183px;
+    left: 1574.6px;
+    top: 132px;
   }
   .n-40 {
     position: absolute;
-    left: 609.6px;
-    top: 144px;
+    left: 1631.6px;
+    top: 127px;
   }
   .n-41 {
     position: absolute;
-    left: 609.6px;
-    top: 144px;
+    left: 1688.6px;
+    top: 128px;
   }
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   position: relative;
 `;
 
@@ -434,7 +436,7 @@ export default function AppHome(props) {
         <p>
           <label className="input-box n-29">
             <input type="checkbox" class="filled-in" />
-            <span></span>
+            <span>Rajiv Chowk</span>
           </label>
         </p>
         <p>
