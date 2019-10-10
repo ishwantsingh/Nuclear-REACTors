@@ -50,7 +50,19 @@ const EnvironmentalRoad = props => {
     return Math.round(footprint * 100) / 100;
   }
   function busPrint() {
-    return Math.round(parseFloat(props.distance) * 0.1 * 100) / 100;
+    return Math.round(parseFloat(props.distance) * 0.027 * 10000) / 10000;
+  }
+  function cabPrint() {
+    return Math.round(parseFloat(props.distance) * 0.072 * 10000) / 10000;
+  }
+  function autoPrint() {
+    return Math.round(parseFloat(props.distance) * 0.035 * 10000) / 10000;
+  }
+  function bikePrint() {
+    return Math.round(parseFloat(props.distance) * 0.028 * 10000) / 10000;
+  }
+  function metroPrint() {
+    return Math.round(parseFloat(props.distance) * 0.02 * 10000) / 10000;
   }
   if (props.distance && props.time) {
     return (
@@ -74,11 +86,26 @@ const EnvironmentalRoad = props => {
               <td>{busPrint()} kg of CO2</td>
             </tr>
             <tr>
+              <td>Cab</td>
+              <td>{cabPrint()} kg of CO2</td>
+            </tr>
+            <tr>
+              <td>Auto</td>
+              <td>{autoPrint()} kg of CO2</td>
+            </tr>
+            <tr>
+              <td>Bus</td>
+              <td>{busPrint()} kg of CO2</td>
+            </tr>
+            <tr>
               <td>Metro</td>
-              <td>0 kg of CO2</td>
+              <td>{metroPrint()} kg of CO2</td>
             </tr>
           </tbody>
         </table>
+
+        <br />
+        <br />
       </Styledcontainer>
     );
   } else {
