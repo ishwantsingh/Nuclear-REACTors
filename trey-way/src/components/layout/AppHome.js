@@ -41,10 +41,22 @@ import metro from "../../images/metro.jpg";
 // `;
 
 const StyledContainer = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+    align-items: center;
+    justify-content: center;
   margin-top: 10rem;
   width: 93%;
   height: 93%;
   margin: 0 auto;
+  .infoComponent {
+    width: 68%;
+  }
+  .btn {
+    position: absolute;
+    top: -250px;
+  }
   .input-box {
     display: block;
     position: absolute;
@@ -317,6 +329,12 @@ class AppHome extends React.Component {
       <StyledContainer>
         <Image src={metro} alt="metro" />
         <form onSubmit={this.handleSubmit}>
+          <div className="input-field">
+            <a href="#info">
+              {" "}
+              <button className="waves-effect btn">Show Info</button>
+            </a>
+          </div>
           <p>
             <label className="input-box n-1">
               <input
@@ -769,21 +787,26 @@ class AppHome extends React.Component {
               <span></span>
             </label>
           </p>
-          <div className="input-field">
-            <button className="waves-effect btn">Show Info</button>
-          </div>
         </form>
-        {/* <div className="containerAll">
-        <div className="heading">Travelling Via ?</div>
-        <div className="links">
-          <Link to="/road" className="button">
-            Road
-          </Link>
-          <Link to="/metro" className="button">
-            Metro
-          </Link>
+        <br />
+        <br /> <br /> <br /> <br /> <br /> <br />
+        <div className="infoComponent" id="info">
+          {" "}
+          <Financial />
+          <br />
+          <br />
+          <Environmental />
         </div>
-      </div> */}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </StyledContainer>
     );
   }
