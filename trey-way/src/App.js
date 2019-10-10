@@ -14,7 +14,7 @@ import User from "./components/user/User";
 
 class App extends Component {
   render() {
-    const { auth } = this.props;
+    const { auth, profile } = this.props;
     return (
       <Router>
         <Headbar />
@@ -38,7 +38,7 @@ class App extends Component {
           />
           <Route
             path="/user"
-            render={props => <User {...props} auth={auth} />}
+            render={props => <User {...props} auth={auth} profile={profile} />}
           />
           <Switch>
             <Route
@@ -54,7 +54,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
   };
 };
 

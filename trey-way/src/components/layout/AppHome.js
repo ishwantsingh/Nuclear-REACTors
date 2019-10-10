@@ -330,10 +330,8 @@ class AppHome extends React.Component {
         <Image src={metro} alt="metro" />
         <form onSubmit={this.handleSubmit}>
           <div className="input-field">
-            <a href="#info">
-              {" "}
-              <button className="waves-effect btn">Show Info</button>
-            </a>
+            {" "}
+            <button className="waves-effect btn">Show Info</button>
           </div>
           <p>
             <label className="input-box n-1">
