@@ -9,6 +9,8 @@ import Dropdown from "./Dropdown";
 
 import getInfo from "../../state/actions/actionCreators";
 
+import metro from "../../images/metro.jpg";
+
 const StyledContainer = styled.div`
   width: 100%;
   display: flex;
