@@ -57,6 +57,7 @@ class MetroHome extends React.Component {
     this.setState({
       [e.target.id]: e.target.value
     });
+    console.log("boo");
   };
   handleSubmit = e => {
     e.preventDefault();

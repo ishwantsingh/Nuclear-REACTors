@@ -3,6 +3,11 @@ import styled from "styled-components";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
+import Financial from "../metro/information/Financial";
+import Environmental from "../metro/information/Environmental";
+
+import getInfo from "../../state/actions/actionCreators";
+
 import metro from "../../images/metro.jpg";
 
 // const StyledContainer = styled.div`
@@ -254,7 +259,7 @@ const StyledContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 99%;
+  width: 100%;
   height: 99%;
   position: relative;
 `;
@@ -262,16 +267,33 @@ const Image = styled.img`
 class AppHome extends React.Component {
   state = {
     start: "",
-    end: ""
+    end: "",
+    count: 0
   };
 
-  startRef = React.createRef();
-  endRef = React.createRef();
+  // startRef = React.createRef();
+  // endRef = React.createRef();
 
   handleChange = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
+    if (this.state.count == 0) {
+      console.log(e.target.name, "b");
+      this.setState({
+        start: e.target.name,
+        count: 1
+      });
+    } else if (this.state.count == 1) {
+      this.setState({
+        end: e.target.name,
+        count: 0
+      });
+    }
+    console.log(e.target.name, "boo");
+    // this.setState({
+    //   count: 1,
+    //   start: e.target.name
+    // });
+
+    console.log(this.state, "oof");
   };
 
   handleSubmit = e => {
@@ -281,8 +303,10 @@ class AppHome extends React.Component {
       start: "",
       end: ""
     });
-    this.startRef.current.value = "";
-    this.endRef.current.value = "";
+    console.log(this.state, "oof");
+
+    // this.startRef.current.value = "";
+    // this.endRef.current.value = "";
   };
 
   render() {
@@ -295,250 +319,459 @@ class AppHome extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <p>
             <label className="input-box n-1">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 21"
+                onChange={this.handleChange}
+                id="1"
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-2">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 8"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-3">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 9"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-4">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 10"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-5">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 11"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-6">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 12"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-7">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 13"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-8">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Sector 14"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-9">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-10">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Dwarka Mor"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-11">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Nawada"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-12">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Uttam Nagar West"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-13">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Uttam Nagar East"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-14">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Janakpuri West"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-15">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Janakpuri East"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-16">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Tilak Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-17">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Subhash Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-18">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Tagore Garden"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-19">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Rajouri Garden"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-20">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Ramesh Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-21">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Moti Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-22">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Kirti Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-23">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Shadipur"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-24">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Patel Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-25">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Rajendra Place"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-26">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Karol Bagh"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-27">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Jhandewalan"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-28">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Ramakrishna Ashram Marg"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-29">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Rajiv Chowk"
+                onChange={this.handleChange}
+              />
               <span>Rajiv Chowk</span>
             </label>
           </p>
           <p>
             <label className="input-box n-30">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Barakhamba Road"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-31">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Mandi House"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-32">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Pragati Maidan"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-33">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Indraprastha"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-34">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Yamuna Bank"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-35">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Laxmi Nagar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-36">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Nirman Vihar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-37">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Preet Vihar"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-38">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Karkarduma"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
           <p>
             <label className="input-box n-39">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Anand Vihar ISBT"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>{" "}
           <p>
             <label className="input-box n-40">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Kaushambi"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>{" "}
           <p>
             <label className="input-box n-41">
-              <input type="checkbox" className="filled-in" value="" />
+              <input
+                type="checkbox"
+                className="filled-in"
+                name="Vaishali"
+                onChange={this.handleChange}
+              />
               <span></span>
             </label>
           </p>
+          <div className="input-field">
+            <button className="waves-effect btn">Show Info</button>
+          </div>
         </form>
         {/* <div className="containerAll">
         <div className="heading">Travelling Via ?</div>
