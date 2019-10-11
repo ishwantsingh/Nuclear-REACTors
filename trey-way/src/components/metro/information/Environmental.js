@@ -66,7 +66,7 @@ const Environmental = props => {
     return (
       <Styledcontainer className="card-action">
         <div className="card-text">Environmental Information:</div>
-        <table className="striped">
+        {/* <table className="striped">
           <thead>
             <tr>
               <th>Transport</th>
@@ -100,12 +100,10 @@ const Environmental = props => {
               <td>{metroPrint()} kg of CO2</td>
             </tr>
           </tbody>
-        </table>
-        <br />
-        <br />
+        </table> */}
         {/* {
           (data = )
-        } */};
+        } */}
         <VictoryChart domainPadding={50}>
           <VictoryAxis
             // tickValues specifies both the number of ticks and where

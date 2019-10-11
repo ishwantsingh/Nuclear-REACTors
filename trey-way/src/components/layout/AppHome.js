@@ -791,8 +791,6 @@ class AppHome extends React.Component {
         <div className="infoComponent" id="info">
           {" "}
           <Financial />
-          <br />
-          <br />
           <Environmental />
         </div>
         <br />
