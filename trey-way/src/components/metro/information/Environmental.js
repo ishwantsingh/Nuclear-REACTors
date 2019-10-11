@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
 
 const Styledcontainer = styled.div`
   display: flex;
@@ -100,9 +101,38 @@ const Environmental = props => {
             </tr>
           </tbody>
         </table>
-
         <br />
         <br />
+        {/* {
+          (data = )
+        } */};
+        <VictoryChart domainPadding={50}>
+          <VictoryAxis
+            // tickValues specifies both the number of ticks and where
+            // they are placed on the axis
+            tickValues={[1, 2, 3, 4, 5, 6]}
+            tickFormat={["Metro", "Car", "Bus", "Cab", "Auto", "Bike"]}
+          />
+          <VictoryAxis
+            dependentAxis
+            // tickFormat specifies how ticks should be displayed
+            tickFormat={x => `${x}kg`}
+          />
+          <VictoryBar
+            data={[
+              { quarter: "Metro", earnings: metroPrint() },
+              { quarter: "Car", earnings: carPrint() },
+              { quarter: "Bus", earnings: busPrint() },
+              { quarter: "Cab", earnings: cabPrint() },
+              { quarter: "Auto", earnings: autoPrint() },
+              { quarter: "Bike", earnings: bikePrint() }
+            ]}
+            // data accessor for x values
+            x="quarter"
+            // data accessor for y values
+            y="earnings"
+          />
+        </VictoryChart>
       </Styledcontainer>
     );
   } else {
@@ -113,6 +143,17 @@ const Environmental = props => {
     );
   }
 };
+
+// class Environmental extends React.Component {
+//   render() {
+//     return (
+//       <Plot
+//         data={[{ type: "bar", x: [1, 2, 3], y: [2, 5, 3] }]}
+//         layout={{ width: 320, height: 240, title: "A Fancy Plot" }}
+//       />
+//     );
+//   }
+// }
 
 function mapStateToProps(state) {
   return {

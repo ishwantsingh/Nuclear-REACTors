@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
 
 const Styledcontainer = styled.div`
   dispaly: flex;
@@ -68,7 +69,7 @@ const EnvironmentalRoad = props => {
     return (
       <Styledcontainer className="card-action">
         <div className="card-text">Environmental Information:</div>
-        <table className="striped highlight">
+        {/* <table className="striped highlight">
           <thead>
             <tr>
               <th>Transport</th>
@@ -102,8 +103,34 @@ const EnvironmentalRoad = props => {
               <td>{metroPrint()} kg of CO2</td>
             </tr>
           </tbody>
-        </table>
-
+        </table> */}
+        <VictoryChart domainPadding={100}>
+          <VictoryAxis
+            // tickValues specifies both the number of ticks and where
+            // they are placed on the axis
+            tickValues={[1, 2, 3, 4, 5, 6]}
+            tickFormat={["Metro", "Car", "Bus", "Cab", "Auto", "Bike"]}
+          />
+          <VictoryAxis
+            dependentAxis
+            // tickFormat specifies how ticks should be displayed
+            tickFormat={x => `${x}kg`}
+          />
+          <VictoryBar
+            data={[
+              { quarter: "Metro", earnings: metroPrint() },
+              { quarter: "Car", earnings: carPrint() },
+              { quarter: "Bus", earnings: busPrint() },
+              { quarter: "Cab", earnings: cabPrint() },
+              { quarter: "Auto", earnings: autoPrint() },
+              { quarter: "Bike", earnings: bikePrint() }
+            ]}
+            // data accessor for x values
+            x="quarter"
+            // data accessor for y values
+            y="earnings"
+          />
+        </VictoryChart>
         <br />
         <br />
       </Styledcontainer>

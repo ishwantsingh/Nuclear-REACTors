@@ -175,6 +175,12 @@ class RoadHome extends React.Component {
             <br />
             <br />
             <div className="infoContainer">
+              <br />
+              <br />
+              <br />
+              <br />
+
+              <br />
               <FinancialRoad
                 start={this.state.start}
                 end={this.state.end}
