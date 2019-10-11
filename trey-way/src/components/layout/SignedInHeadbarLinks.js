@@ -67,7 +67,7 @@ function SignedInHeadbarLinks(props) {
         <StyledLogoutBut onClick={props.logout} className="waves-effect btn">
           Log Out
         </StyledLogoutBut>
-        <Link to="/appHome" className="links">
+        <Link to="/metro" className="links">
           <StyledBut className="waves-effect btn"> Calculate </StyledBut>
         </Link>
         {/* <Link to="/about" className="links">

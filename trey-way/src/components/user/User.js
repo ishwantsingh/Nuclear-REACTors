@@ -2,23 +2,32 @@ import React from "react";
 import styled from "styled-components";
 import { Redirect } from "react-router-dom";
 
+import gold from "../../images/gold.svg";
+import silver from "../../images/silver.svg";
+
 const StyledImg = styled.img`
   border-radius: 3%;
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   margin-left: 10px;
 `;
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: center;
+
   .profile-pic-div {
     display: flex;
   }
   h5 {
     font-size: 2rem;
     font-weight: bold;
+  }
+  h4 {
+    margin-left: 20px;
+    margin-top: 110px;
   }
   span {
     font-size: 1.5rem;
@@ -30,19 +39,22 @@ function User(props) {
   return (
     <StyledDiv className="card-panel">
       <div className="profile-pic-div">
-        <h5>Profile Picture:</h5>
         <StyledImg
           src={props.auth.photoURL}
           alt="profile pic"
           className="profile-img"
-        />
+        />{" "}
+        <br />
+        <br />
+        <br />
+        <h4> {props.auth.displayName}</h4>
       </div>
-      <h5>
-        Username: <span>{props.auth.displayName}</span>
-      </h5>
+      <h3>Account Information</h3>
 
       <h5>
         Badges: <span>{props.profile.badges}</span>
+        {/* <image src={gold} className="image" />
+        <image src={silver} className="image" /> */}
         {console.log(props.profile.badges)}
       </h5>
       <h5>
