@@ -48,6 +48,19 @@ const FinancialRoad = props => {
       return Math.round(65 + price);
     }
   }
+  function autoFuel() {
+    if (parseFloat(props.distance) === 0) {
+      var price = 0;
+      return Math.round(price);
+    } else if (parseFloat(props.distance) <= 1.5) {
+      var price = 25;
+      return Math.round(price);
+    } else {
+      price = (parseFloat(props.distance) - 1.5) * 9.5;
+      //console.log(props.distance);
+      return Math.round(25 + price);
+    }
+  }
   function busCost() {
     if (parseFloat(props.distance) === 0) {
       var cost = 0 + " Rs";
@@ -106,6 +119,10 @@ const FinancialRoad = props => {
             <tr>
               <td>Bus</td>
               <td>{busCost()}</td>
+            </tr>
+            <tr>
+              <td>Auto</td>
+              <td>{autoFuel()}</td>
             </tr>
           </tbody>
         </table>
