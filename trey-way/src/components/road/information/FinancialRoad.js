@@ -38,7 +38,7 @@ const Styledcontainer = styled.div`
 // average price of petrol per km = 4rs
 
 const FinancialRoad = props => {
-  function carFuel() {
+  function cabFuel() {
     if (parseFloat(props.distance) === 0) {
       var price = 0;
       return Math.round(price);
@@ -56,9 +56,29 @@ const FinancialRoad = props => {
       var price = 25;
       return Math.round(price);
     } else {
-      price = (parseFloat(props.distance) - 1.5) * 9.5;
+      price = (parseFloat(props.distance) * 1.6093 - 1.5) * 9.5;
       //console.log(props.distance);
       return Math.round(25 + price);
+    }
+  }
+  function bikeFuel() {
+    if (parseFloat(props.distance) === 0) {
+      var price = 0;
+      return Math.round(price);
+    } else {
+      price = parseFloat(props.distance) * 1.6093 * 0.9125;
+      //console.log(props.distance);
+      return Math.round(price);
+    }
+  }
+  function carFuel() {
+    if (parseFloat(props.distance) === 0) {
+      var price = 0;
+      return Math.round(price);
+    } else {
+      price = parseFloat(props.distance) * 1.6093 * 7.3;
+      //console.log(props.distance);
+      return Math.round(price);
     }
   }
   function busCost() {
@@ -113,16 +133,25 @@ const FinancialRoad = props => {
 
           <tbody>
             <tr>
-              <td>Car</td>
-              <td>{carFuel()} Rs</td>
+              <td>Cab</td>
+              <td>{cabFuel()} Rs</td>
             </tr>
+
             <tr>
               <td>Bus</td>
               <td>{busCost()}</td>
             </tr>
             <tr>
+              <td>Car</td>
+              <td>{carFuel()} Rs</td>
+            </tr>
+            <tr>
               <td>Auto</td>
               <td>{autoFuel()}</td>
+            </tr>
+            <tr>
+              <td>Bike</td>
+              <td>{bikeFuel()}</td>
             </tr>
           </tbody>
         </table>
