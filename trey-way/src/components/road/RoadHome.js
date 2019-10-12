@@ -45,6 +45,7 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 20px;
   }
 `;
 
@@ -177,8 +178,6 @@ class RoadHome extends React.Component {
             <div className="infoContainer">
               <br />
               <br />
-              <br />
-              <br />
 
               <br />
               <FinancialRoad
@@ -187,8 +186,6 @@ class RoadHome extends React.Component {
                 distance={this.state.distance}
                 time={this.state.time}
               />
-              <br />
-              <br />
 
               <EnvironmentalRoad
                 start={this.state.start}

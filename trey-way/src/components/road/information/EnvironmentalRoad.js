@@ -104,7 +104,7 @@ const EnvironmentalRoad = props => {
             </tr>
           </tbody>
         </table> */}
-        <VictoryChart domainPadding={100}>
+        <VictoryChart domainPadding={80} height={280}>
           <VictoryAxis
             // tickValues specifies both the number of ticks and where
             // they are placed on the axis

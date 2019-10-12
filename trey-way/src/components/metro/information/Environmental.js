@@ -104,7 +104,7 @@ const Environmental = props => {
         {/* {
           (data = )
         } */}
-        <VictoryChart domainPadding={50}>
+        <VictoryChart domainPadding={50} height={250}>
           <VictoryAxis
             // tickValues specifies both the number of ticks and where
             // they are placed on the axis

@@ -50,6 +50,15 @@ flex-direction: column;
   width: 93%;
   height: 93%;
   margin: 0 auto;
+
+    a{
+      position: absolute;
+      font-size: 2.5rem;
+  color: #009688;
+      top: -230px;
+      left: 25px;
+    }
+
   .infoComponent {
     width: 68%;
   }
@@ -332,6 +341,7 @@ class AppHome extends React.Component {
           <div className="input-field">
             {" "}
             <button className="waves-effect btn">Show Info</button>
+            <a href="#info">v</a>
           </div>
           <p>
             <label className="input-box n-1">
