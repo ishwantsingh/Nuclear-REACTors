@@ -51,7 +51,7 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     .container {
-      height: 60vh;
+      height: 65vh;
       width: 95vw;
       margin: 0 2%;
     }
