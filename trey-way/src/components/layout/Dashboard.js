@@ -53,11 +53,70 @@ const StyledContainer = styled.div`
       color: #009688;
     }
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    .containerAll {
+      margin: 0 2%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      .heading {
+        font-size: 1.7rem;
+      }
+      .info-div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        .sub-info {
+          width: 50%;
+          height: 50%;
+          justify-content: space-around;
+          font-size: 1rem;
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+      }
+      .sub-heading {
+        font-size: 1.2rem;
+      }
+      .transport-method {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .button {
+        text-decoration: none;
+        font-size: 1em;
+        margin: 1em;
+        padding: 0.25em 1em;
+        border: 2px solid #009688;
+        border-radius: 3px;
+        color: #009688;
+      }
+    }
+  }
 `;
 
 const Image = styled.img`
   width: 30%;
   height: 30%;
+  @media (max-width: 600px) {
+    width: 90%;
+    height: 90%;
+  }
 `;
 
 function Dashboard(props) {
