@@ -75,12 +75,13 @@ const StyledContainer = styled.div`
         flex-wrap: wrap;
         font-size: 1rem;
         .sub-info {
-          width: 50%;
-          height: 50%;
+          margin-top: 1rem;
+          width: 70%;
+          height: 70%;
           justify-content: space-around;
-          font-size: 1rem;
+          font-size: 1.4rem;
           p {
-            font-size: 1rem;
+            font-size: 1.15rem;
           }
         }
       }
@@ -146,10 +147,6 @@ function Dashboard(props) {
               Metro
             </Link>
           </div>
-          {/* <Link className="button" to="/apphome">
-            {" "}
-            Know your Carbon footprint
-          </Link> */}
         </div>
       </div>
     </StyledContainer>
