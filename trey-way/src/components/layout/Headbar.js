@@ -12,17 +12,17 @@ import SignedOutLinks from "./SignedOutLinks";
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
-
+  flex-direction: row;
   align-items: center;
   margin-bottom: 15px;
   height: 53px;
   background-color: #009688;
   a {
-    margin-right: 3%;
-    margin-left: 5.8%;
     text-decoration: none;
   }
   .logo {
+    padding-left: 5.8%;
+    width: 50%;
     color: white;
     font-size: 1.8em;
     font-weight: bold;
@@ -37,7 +37,7 @@ const StyledDiv = styled.div`
   .link-container {
     display: flex;
     flex-direction: row-reverse;
-    width: 30%;
+    width: 50%;
     flex-grow: 1;
     margin-right: 0;
   }
@@ -73,7 +73,4 @@ const mapDispatchToProps = dispatch => {
     login: () => dispatch(login())
   };
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Headbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Headbar);
