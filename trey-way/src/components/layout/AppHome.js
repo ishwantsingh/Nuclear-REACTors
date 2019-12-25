@@ -87,43 +87,43 @@ flex-direction: column;
   }
   .n-4 {
     position: absolute;
-    left: 318.6px;
-    top: 721px;
+    left: 16.59375%;
+    top: 71.59880834160874%;
   }
   .n-5 {
     position: absolute;
-    left: 284.6px;
-    top: 681px;
+    left: 14.82291666666667%;
+    top: 67.6266137040715%;
   }
   .n-6 {
     position: absolute;
-    left: 244.6px;
-    top: 644px;
+    left: 12.739583333333332%;
+    top: 63.952333664349545%;
   }
   .n-7 {
     position: absolute;
-    left: 209.6px;
-    top: 606px;
+    left: 10.916666666666666%;
+    top: 60.178748758689174%;
   }
   .n-8 {
     position: absolute;
-    left: 167.6px;
-    top: 567px;
+    left: 8.729166666666668%;
+    top: 56.30585898709036%;
   }
   .n-9 {
     position: absolute;
-    left: 126.6px;
-    top: 495px;
+    left: 6.59375%;
+    top: 49.15590863952334%;
   }
   .n-10 {
     position: absolute;
-    left: 159.6px;
-    top: 458px;
+    left: 8.312499999999998%;
+    top: 45.48162859980139%;
   }
   .n-11 {
     position: absolute;
-    left: 189.6px;
-    top: 447px;
+    left: 9.874999999999998%;
+    top: 44.389275074478654%;
   }
   .n-12 {
     position: absolute;
@@ -281,7 +281,7 @@ flex-direction: column;
 
 const Image = styled.img`
   width: 100%;
-  height: 90.8vh;
+  height: 90.7vh;
   position: relative;
 `;
 
