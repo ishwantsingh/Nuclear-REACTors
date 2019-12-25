@@ -72,18 +72,18 @@ flex-direction: column;
   }
   .n-1 {
     position: absolute;
-    left: 435.6px;
-    top: 837px;
+    left: 22.687500000000004%;
+    top: 83.11817279046674%;
   }
   .n-2 {
     position: absolute;
-    left: 394.6px;
-    top: 798px;
+    left: 20.552083333333336%;
+    top: 79.24528301886792%;
   }
   .n-3 {
     position: absolute;
-    left: 358.6px;
-    top: 755px;
+    left: 18.677083333333336%;
+    top: 74.97517378351539%;
   }
   .n-4 {
     position: absolute;
@@ -281,7 +281,7 @@ flex-direction: column;
 
 const Image = styled.img`
   width: 100%;
-  height: 99%;
+  height: 90.8vh;
   position: relative;
 `;
 
@@ -824,7 +824,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(AppHome);
+export default connect(null, mapDispatchToProps)(AppHome);
