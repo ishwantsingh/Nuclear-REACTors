@@ -57,10 +57,18 @@ const StyledContainer = styled.div`
     }
     .unselected {
       order: -1;
-      width: 100%;
+      width: 90%;
       font-size: 1.5rem;
       margin: 1rem 2% 2rem 2%;
       margin-top: 1rem;
+    }
+    .info {
+      width: 100%;
+    }
+    .infoContainer {
+      width: 98%;
+      margin: 0 auto;
+      padding-left: 0px;
     }
   }
 `;
