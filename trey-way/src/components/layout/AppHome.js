@@ -127,63 +127,63 @@ flex-direction: column;
   }
   .n-12 {
     position: absolute;
-    left: 242.6px;
-    top: 442px;
+    left: 12.635416666666666%;
+    top: 43.8927507447865%;
   }
   .n-13 {
     position: absolute;
-    left: 294.6px;
-    top: 444px;
+    left: 15.34375%;
+    top: 44.091360476663354%;
   }
   .n-14 {
     position: absolute;
-    left: 345.6px;
-    top: 409px;
+    left: 18.000000000000004%;
+    top: 40.615690168818276%;
   }
   .n-15 {
     position: absolute;
-    left: 385.6px;
-    top: 360px;
+    left: 20.083333333333332%;
+    top: 35.749751737835155%;
   }
   .n-16 {
     position: absolute;
-    left: 433.6px;
-    top: 321px;
+    left: 22.583333333333336%;
+    top: 31.876861966236348%;
   }
   .n-17 {
     position: absolute;
-    left: 475.6px;
-    top: 273px;
+    left: 24.770833333333332%;
+    top: 27.110228401191662%;
   }
   .n-18 {
     position: absolute;
-    left: 521.6px;
-    top: 232px;
+    left: 27.166666666666668%;
+    top: 23.038728897715988%;
   }
   .n-19 {
     position: absolute;
-    left: 560.6px;
-    top: 183px;
+    left: 29.197916666666668%;
+    top: 18.17279046673287%;
   }
   .n-20 {
     position: absolute;
-    left: 609.6px;
-    top: 144px;
+    left: 31.75%;
+    top: 14.299900695134063%;
   }
   .n-21 {
     position: absolute;
-    left: 652.6px;
-    top: 97px;
+    left: 33.989583333333336%;
+    top: 9.632571996027806%;
   }
   .n-22 {
     position: absolute;
-    left: 701.6px;
-    top: 83px;
+    left: 36.541666666666664%;
+    top: 8.24230387288977%;
   }
   .n-23 {
     position: absolute;
-    left: 736.6px;
-    top: 120px;
+    left: 38.364583333333336%;
+    top: 11.916583912611719%;
   }
   .n-24 {
     position: absolute;
