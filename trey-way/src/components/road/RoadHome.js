@@ -47,6 +47,30 @@ const StyledContainer = styled.div`
     justify-content: center;
     padding-left: 20px;
   }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    .container {
+      height: 65vh;
+      width: 95vw;
+      margin: 0 2%;
+    }
+    .unselected {
+      order: -1;
+      width: 90%;
+      font-size: 1.5rem;
+      margin: 1rem 2% 2rem 2%;
+      margin-top: 1rem;
+    }
+    .info {
+      width: 100%;
+    }
+    .infoContainer {
+      width: 98%;
+      margin: 0 auto;
+      padding-left: 0px;
+    }
+  }
 `;
 
 class RoadHome extends React.Component {
@@ -178,7 +202,6 @@ class RoadHome extends React.Component {
             <div className="infoContainer">
               <br />
               <br />
-
               <br />
               <FinancialRoad
                 start={this.state.start}

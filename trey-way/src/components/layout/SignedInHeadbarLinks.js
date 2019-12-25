@@ -6,15 +6,15 @@ import { Link, NavLink } from "react-router-dom";
 import { logout } from "../../state/actions/authAction.js";
 
 const StyledHeadDiv = styled.div`
+  @media (max-width: 600px) {
+    width: 100%;
+  }
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 50%;
   height: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 3% 3px 0;
-  a {
-    margin-top: 0 !important;
-  }
   .links {
     width: 25%;
   }
@@ -26,32 +26,37 @@ const StyledHeadDiv = styled.div`
     margin-right: 0;
     align-items: center;
   }
+  .link-user {
+    border-radius: 50%;
+    height: 3.1rem;
+    width: 3.1rem;
+    margin-right: 2rem;
+  }
 `;
 
 const StyledUserImg = styled.img`
-  margin-top: 7px;
   border-radius: 50%;
-  height: 45px;
-  width: 45px;
+  height: 3.1rem;
+  width: 3.1rem;
 `;
 
 const StyledLogoutBut = styled.button`
-  width: 25%;
+  width: 8rem;
   background-color: white;
   color: #009688;
   border-radius: 3px;
   font-weight: bold;
   font-size: 0.92rem;
 `;
-const StyledBut = styled.button`
-  width: 100%;
-  background-color: white;
-  color: #009688;
-  border-radius: 3px;
-  font-weight: bold;
-  font-size: 0.92rem;
-  padding: 0 1px;
-`;
+// const StyledBut = styled.button`
+//   width: 100%;
+//   background-color: white;
+//   color: #009688;
+//   border-radius: 3px;
+//   font-weight: bold;
+//   font-size: 0.92rem;
+//   padding: 0 1px;
+// `;
 
 function SignedInHeadbarLinks(props) {
   return (
@@ -63,17 +68,17 @@ function SignedInHeadbarLinks(props) {
           className="profile-img"
         />
       </NavLink>
-      <div className="link-container">
-        <StyledLogoutBut onClick={props.logout} className="waves-effect btn">
-          Log Out
-        </StyledLogoutBut>
-        <Link to="/metro" className="links">
+      {/* <div className="link-container"> */}
+      <StyledLogoutBut onClick={props.logout} className="waves-effect btn">
+        Log Out
+      </StyledLogoutBut>
+      {/* <Link to="/metro" className="links">
           <StyledBut className="waves-effect btn"> Calculate </StyledBut>
-        </Link>
-        {/* <Link to="/about" className="links">
+        </Link> */}
+      {/* <Link to="/about" className="links">
           <StyledBut className="waves-effect btn"> About </StyledBut>
         </Link> */}
-      </div>
+      {/* </div> */}
     </StyledHeadDiv>
   );
 }
@@ -83,7 +88,4 @@ const mapDispatchToProps = dispatch => {
     logout: () => dispatch(logout())
   };
 };
-export default connect(
-  null,
-  mapDispatchToProps
-)(SignedInHeadbarLinks);
+export default connect(null, mapDispatchToProps)(SignedInHeadbarLinks);

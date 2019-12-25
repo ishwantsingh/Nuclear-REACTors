@@ -33,6 +33,14 @@ const Styledcontainer = styled.div`
       text-align: center;
     }
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    table {
+      height: 70%;
+    }
+  }
 `;
 //average fuel efficiency = 18.2km/l and petrol price: 72.6rs/lt
 // average price of petrol per km = 4rs

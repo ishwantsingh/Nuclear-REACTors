@@ -32,10 +32,10 @@ class App extends Component {
             path="/road"
             render={props => <RoadHome {...props} auth={auth} />}
           />
-          <Route
+          {/* <Route
             path="/metro"
             render={props => <MetroHome {...props} auth={auth} />}
-          />
+          /> */}
           <Route
             path="/user"
             render={props => <User {...props} auth={auth} profile={profile} />}
@@ -59,7 +59,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(App);
+export default connect(mapStateToProps, null)(App);

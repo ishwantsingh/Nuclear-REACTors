@@ -7,7 +7,7 @@ const Styledcontainer = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  width: 93%;
   margin-bottom: 0px;
   margin-right: 7%;
   margin-left: 6.1%;
@@ -17,6 +17,9 @@ const Styledcontainer = styled.div`
     span {
       font-weight: bold;
     }
+  }
+  card-text {
+    font-size: 2rem;
   }
   font-size: 1.3rem;
   text-align: left;
@@ -104,7 +107,7 @@ const EnvironmentalRoad = props => {
             </tr>
           </tbody>
         </table> */}
-        <VictoryChart domainPadding={80} height={280}>
+        <VictoryChart domainPadding={80} height={280} width={500}>
           <VictoryAxis
             // tickValues specifies both the number of ticks and where
             // they are placed on the axis
