@@ -15,7 +15,7 @@ export function Login(props) {
   if (props.auth.uid) return <Redirect to="/" />;
   if (!props.auth.uid) {
     return (
-      <StyledLoginDiv className="card-panel">
+      <StyledLoginDiv>
         <h3>Hmm... seems like you haven't logged in.</h3>
         <h4>Click the Login Button in the top-right to Login with Google!</h4>
       </StyledLoginDiv>
